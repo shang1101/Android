@@ -56,7 +56,7 @@ public class MainActivity extends Activity {
 		Animal h = new Animal("ördek", 8, "deneme", "deneme", "deneme",
 				"deneme");
 
-		Animal j = new Animal("kedi", 5, "deneme", "deneme", "deneme", "deneme");
+		Animal j = new Animal("tavşan", 5, "deneme", "deneme", "deneme", "deneme");
 		Animal k = new Animal("köpek", 6, "deneme", "deneme", "deneme",
 				"deneme");
 
