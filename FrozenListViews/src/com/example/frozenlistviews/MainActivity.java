@@ -57,7 +57,7 @@ public class MainActivity extends Activity {
 				"deneme");
 
 		Animal j = new Animal("tavşan", 5, "deneme", "deneme", "deneme", "deneme");
-		Animal k = new Animal("köpek", 6, "deneme", "deneme", "deneme",
+		Animal k = new Animal("maymun", 6, "deneme", "deneme", "deneme",
 				"deneme");
 
 		//
