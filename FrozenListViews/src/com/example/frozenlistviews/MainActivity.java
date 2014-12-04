@@ -56,8 +56,8 @@ public class MainActivity extends Activity {
 		Animal h = new Animal("ördek", 8, "deneme", "deneme", "deneme",
 				"deneme");
 
-		Animal j = new Animal("tavşan", 5, "deneme", "deneme", "deneme", "deneme");
-		Animal k = new Animal("maymun", 6, "deneme", "deneme", "deneme",
+		Animal j = new Animal("kedi", 5, "deneme", "deneme", "deneme", "deneme");
+		Animal k = new Animal("köpek", 6, "deneme", "deneme", "deneme",
 				"deneme");
 
 		//
@@ -74,10 +74,11 @@ public class MainActivity extends Activity {
 
 		// I created a simple custom adapter to use ViewHolder
 
+		// we can decide the count of the column will be fixed
 		AnimalAdapterHolder adapter1 = new AnimalAdapterHolder(
 				MainActivity.this, R.layout.row, animals, 2);
 		AnimalAdapterHolder adapter2 = new AnimalAdapterHolder(
-				MainActivity.this, R.layout.row, animals, 0);
+				MainActivity.this, R.layout.row, animals, 7);
 
 		listView.setAdapter(adapter1);
 		listview2.setAdapter(adapter2);

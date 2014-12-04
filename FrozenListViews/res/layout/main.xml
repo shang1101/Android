@@ -3,13 +3,11 @@
     android:id="@+id/recordViewLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal"
-    android:weightSum="8" >
+    android:orientation="horizontal" >
 
     <HorizontalScrollView
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="2" >
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -23,12 +21,9 @@
         </LinearLayout>
     </HorizontalScrollView>
 
-  
-
     <HorizontalScrollView
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="6" >
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
 
         <LinearLayout
             android:id="@+id/scroll"

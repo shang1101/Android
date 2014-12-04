@@ -21,6 +21,7 @@ public class AnimalAdapterHolder extends ArrayAdapter<Animal> {
 	Context context = null;
 	ArrayList<Animal> animals;
 	int countColumnLocked = 0;
+	View[] views;
 
 	public AnimalAdapterHolder(Context context, int resource,
 			List<Animal> objects, int count) {
@@ -28,7 +29,7 @@ public class AnimalAdapterHolder extends ArrayAdapter<Animal> {
 		this.context = context;
 		countColumnLocked = count;
 		animals = (ArrayList<Animal>) objects;
-
+		views = new View[7];
 	}
 
 	@Override
@@ -45,44 +46,42 @@ public class AnimalAdapterHolder extends ArrayAdapter<Animal> {
 			convertView = inflater.inflate(R.layout.row, parent, false);
 
 			viewHolder = new ViewHolder();
-			if (countColumnLocked > 0) {
-				// well set up the ViewHolder
 
-				viewHolder.name = (TextView) convertView
-						.findViewById(R.id.textView1);
+			// well set up the ViewHolder
 
-				viewHolder.age = (TextView) convertView
-						.findViewById(R.id.textView2);
-			}
+			viewHolder.name = (TextView) convertView
+					.findViewById(R.id.textView1);
+			views[0] = viewHolder.name;
 
-			else {
+			viewHolder.age = (TextView) convertView
+					.findViewById(R.id.textView2);
+			views[1] = viewHolder.age;
 
-				viewHolder.name = (TextView) convertView
-						.findViewById(R.id.textView1);
+			// store the holder with the view.
+			viewHolder.hunting = (TextView) convertView
+					.findViewById(R.id.textView3);
+			views[2] = viewHolder.hunting;
 
-				viewHolder.age = (TextView) convertView
-						.findViewById(R.id.textView2);
-				// store the holder with the view.
-				viewHolder.hunting = (TextView) convertView
-						.findViewById(R.id.textView3);
+			viewHolder.location = (TextView) convertView
+					.findViewById(R.id.textView4);
+			views[3] = viewHolder.location;
+			// store the holder with the view.
+			viewHolder.speed = (TextView) convertView
+					.findViewById(R.id.textView5);
+			views[4] = viewHolder.speed;
 
-				viewHolder.location = (TextView) convertView
-						.findViewById(R.id.textView4);
-				// store the holder with the view.
-				viewHolder.speed = (TextView) convertView
-						.findViewById(R.id.textView5);
+			viewHolder.type = (TextView) convertView
+					.findViewById(R.id.textView6);
+			views[5] = viewHolder.type;
+			// store the holder with the view.
 
-				viewHolder.type = (TextView) convertView
-						.findViewById(R.id.textView6);
-				// store the holder with the view.
+			viewHolder.trial = (Button) convertView.findViewById(R.id.button1);
+			views[6] = viewHolder.trial;
 
-				viewHolder.trial = (Button) convertView
-						.findViewById(R.id.button1);
-				// store the holder with the view.
+			// store the holder with the view.
+			for (int i = views.length-1; i >= countColumnLocked; i--)
+				views[i].setVisibility(View.GONE);
 
-				
-			}
-			
 			convertView.setTag(viewHolder);
 		} else {
 
@@ -92,13 +91,7 @@ public class AnimalAdapterHolder extends ArrayAdapter<Animal> {
 
 		Animal a = animals.get(position);
 
-		if (a != null && countColumnLocked > 0) {
-			viewHolder.name.setText(a.getName());
-			viewHolder.age.setText("" + a.getAge());
-
-		}
-
-		else if (a != null && countColumnLocked == 0) {
+		if (a != null) {
 			viewHolder.name.setText(a.getName());
 			viewHolder.age.setText("" + a.getAge());
 			viewHolder.speed.setText(a.getSpeed());
