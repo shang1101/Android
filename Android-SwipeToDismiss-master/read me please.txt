@@ -1,0 +1,2 @@
+this project is responsible for 
+swipe to delete feature for listviews (very useful)
