@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">CustomExpandableList</string>
-    <string name="menu_settings">Settings</string>
+    <string name="menu_settings">Sett</string>
     <string name="hello_world">Hello world!</string>
 
 </resources>
