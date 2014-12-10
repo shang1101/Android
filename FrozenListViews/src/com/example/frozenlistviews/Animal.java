@@ -25,7 +25,7 @@ public class Animal {
 		return name;
 	}
 
-
+	//bu yeni branch denemem için bro
 	public void setName(String name) {
 		this.name = name;
 	}
