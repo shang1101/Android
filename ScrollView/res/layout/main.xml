@@ -1,0 +1,101 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignLeft="@+id/seekBarLinearLayout"
+    android:layout_below="@+id/seekBarLinearLayout"
+    android:layout_marginBottom="5sp"
+    android:layout_marginLeft="0sp"
+    android:layout_marginTop="5sp"
+    android:orientation="horizontal"
+    android:weightSum="8" >
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="0dp"
+        android:layout_height="2500dp"
+        android:layout_margin="10dp"
+        android:layout_weight="6"
+        android:padding="10dp"
+        
+        android:scrollbars="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:layout_marginLeft="2sp"
+            android:layout_marginRight="2sp"
+            android:background="@android:color/transparent"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:text="Markalar"
+                android:textColor="@android:color/holo_blue_light" />
+
+            <ListView
+                android:id="@+id/markalarListView"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="5sp"
+                android:background="@drawable/attributes_background"
+                android:fastScrollAlwaysVisible="false"
+                android:fastScrollEnabled="true"
+                android:textSize="13sp" >
+            </ListView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:text="Özellikler"
+                android:textColor="@android:color/holo_blue_light" />
+
+            <ExpandableListView
+                android:id="@+id/attributesExpandableListView"
+                style=""
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2sp"
+                android:layout_marginLeft="0sp"
+                android:layout_marginRight="0sp"
+                android:layout_marginTop="5sp"
+                android:layout_weight="9.75"
+                android:background="@drawable/attributes_background"
+                android:fastScrollAlwaysVisible="false"
+                android:fastScrollEnabled="true"
+                android:transcriptMode="disabled" >
+            </ExpandableListView>
+        </LinearLayout>
+    </ScrollView>
+
+    <com.example.scrollview.VerticalSeekBar
+        android:id="@+id/verticalSeekBar1"
+        android:layout_width="0sp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5sp"
+        android:layout_weight="0.37"
+        android:progressDrawable="@drawable/styled_progress" />
+
+    <LinearLayout
+        android:layout_width="0sp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/btndeneme"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:text="Click body" />
+
+        <Button
+            android:id="@+id/btndeneme2"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:text="Click Body Full" />
+    </LinearLayout>
+
+</LinearLayout>
