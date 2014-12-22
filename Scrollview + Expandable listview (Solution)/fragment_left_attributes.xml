@@ -1,0 +1,297 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".ProductListWithAttributesActivity_AttributesFragment" >
+
+    <LinearLayout
+        android:id="@+id/login_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:background="@android:color/transparent"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8sp" />
+
+        <TextView
+            android:id="@+id/login_status_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16sp"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/login_progress_signing_in"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/stokluCheckBoxLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="5sp"
+        android:layout_marginLeft="10sp" >
+
+        <CheckBox
+            android:id="@+id/stokluCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="20sp"
+            android:layout_weight="1"
+            android:text="Stoklular"
+            android:textSize="20sp" />
+
+        <Space
+            android:layout_width="0sp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/btnFiltrele"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:src="@drawable/filter_button_selector"
+            android:text="Filtrele" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/selectedAttributesLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/stokluCheckBoxLinearLayout"
+        android:layout_below="@+id/stokluCheckBoxLinearLayout"
+        android:layout_marginBottom="0sp"
+        android:layout_marginLeft="10sp"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5sp"
+            android:layout_marginLeft="0sp" >
+
+            <ImageButton
+                android:id="@+id/btnSecilenler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:gravity="left"
+                android:src="@drawable/collections_view_as_list_selector"
+                android:textColor="@android:color/holo_red_dark" />
+
+            <ImageButton
+                android:id="@+id/btnSecilenleriTemizle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:src="@drawable/content_discard_selector" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnQueriedCategoryCheckboxStatusClear"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="match_parent"
+            android:layout_height="30sp"
+            android:layout_weight="1"
+            android:background="@drawable/menu_button_orange_selector"
+            android:drawableRight="@drawable/content_discard_selector"
+            android:gravity="center"
+            android:text="  Kategorileri Temizle"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btnSelectedPricesClear"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="match_parent"
+            android:layout_height="30sp"
+            android:layout_marginTop="2sp"
+            android:layout_weight="1"
+            android:background="@drawable/menu_button_orange_selector"
+            android:drawableRight="@drawable/content_discard_selector"
+            android:gravity="center"
+            android:text="  Fiyatı Temizle"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            android:visibility="gone" />
+
+        <ExpandableListView
+            android:id="@+id/selectedBrandsExpandableListView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2sp"
+            android:layout_marginLeft="0sp"
+            android:layout_marginRight="10sp"
+            android:layout_marginTop="2sp"
+            android:background="@drawable/selected_attributes_background"
+            android:fastScrollAlwaysVisible="false"
+            android:fastScrollEnabled="true"
+            android:verticalScrollbarPosition="left"
+            android:visibility="gone" >
+        </ExpandableListView>
+
+        <ExpandableListView
+            android:id="@+id/selectedAttributesExpandableListView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10sp"
+            android:layout_marginLeft="0sp"
+            android:layout_marginRight="10sp"
+            android:layout_marginTop="2sp"
+            android:background="@drawable/selected_attributes_background"
+            android:fastScrollAlwaysVisible="false"
+            android:fastScrollEnabled="true"
+            android:visibility="gone" >
+        </ExpandableListView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/seekBarLinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/selectedAttributesLinearLayout"
+        android:layout_below="@+id/selectedAttributesLinearLayout"
+        android:background="@drawable/seekbar_background"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/minPriceTextView"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <Space
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/maxPriceTextView"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_weight="1" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/seekBarLinearLayout"
+        android:layout_below="@+id/seekBarLinearLayout"
+        android:layout_marginBottom="5sp"
+        android:layout_marginLeft="0sp"
+        android:layout_marginTop="5sp" >
+
+        <ScrollView
+            android:id="@+id/scrollView1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5sp"
+            android:layout_weight="9"
+            android:background="@drawable/product_list_background"
+            android:fillViewport="true" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2sp"
+                android:layout_marginRight="2sp"
+                android:background="@android:color/transparent"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/categoriesTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:text="Kategoriler"
+                    android:textColor="@android:color/holo_blue_light"
+                    android:visibility="gone" />
+
+                <ExpandableListView
+                    android:id="@+id/categoriesExpandableListView"
+                    android:layout_width="match_parent"
+                    android:layout_height="180sp"
+                    android:layout_marginBottom="0sp"
+                    android:layout_marginLeft="0sp"
+                    android:layout_marginRight="0sp"
+                    android:layout_marginTop="5sp"
+                    android:background="@drawable/attributes_background"
+                    android:fastScrollAlwaysVisible="false"
+                    android:fastScrollEnabled="true"
+                    android:visibility="gone" >
+                </ExpandableListView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:text="Markalar"
+                    android:textColor="@android:color/holo_blue_light" />
+
+                <ListView
+                    android:id="@+id/markalarListView"
+                    android:layout_width="match_parent"
+                    android:layout_height="180sp"
+                    android:layout_marginTop="5sp"
+                    android:background="@drawable/attributes_background"
+                    android:fastScrollAlwaysVisible="false"
+                    android:fastScrollEnabled="true"
+                    android:textSize="13sp" >
+                </ListView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:text="Özellikler"
+                    android:textColor="@android:color/holo_blue_light" />
+
+                <ExpandableListView
+                    android:id="@+id/attributesExpandableListView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10sp"
+                    android:layout_marginLeft="0sp"
+                    android:layout_marginRight="0sp"
+                    android:layout_marginTop="5sp"
+                    android:background="@drawable/attributes_background"
+                    android:fastScrollAlwaysVisible="false"
+                    android:fastScrollEnabled="true"
+                    android:transcriptMode="disabled"
+                    android:scrollingCache="true" >
+                </ExpandableListView>
+            </LinearLayout>
+        </ScrollView>
+
+        <com.teknosa.custom.VerticalSeekBar
+            android:id="@+id/verticalSeekBar1"
+            android:layout_width="0sp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5sp"
+            android:layout_weight="1"
+            android:progressDrawable="@drawable/styled_progress" />
+    </LinearLayout>
+
+</RelativeLayout>
