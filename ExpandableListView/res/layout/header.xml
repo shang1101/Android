@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+
+    <TextView
+        android:id="@+id/lblListHeader"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:paddingLeft="?android:attr/expandableListPreferredItemPaddingLeft"
+        android:text="Header 1"
+        android:textColor="#ccbb00"
+        android:textSize="17dp" />
+
+    <TextView
+        android:id="@+id/lblListHeader1"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:paddingLeft="?android:attr/expandableListPreferredItemPaddingLeft"
+        android:text="Header 2"
+        android:textColor="#ccbb00"
+        android:textSize="17dp" />
+
+    <TextView
+        android:id="@+id/lblListHeader2"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:paddingLeft="?android:attr/expandableListPreferredItemPaddingLeft"
+        android:text="Header 3"
+        android:textColor="#ccbb00"
+        android:textSize="17dp" />
+
+    <TextView
+        android:id="@+id/lblListHeader3"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:paddingLeft="?android:attr/expandableListPreferredItemPaddingLeft"
+        android:text="Header 4"
+        android:textColor="#ccbb00"
+        android:textSize="17dp" />
+
+    <TextView
+        android:id="@+id/lblListHeader4"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:paddingLeft="?android:attr/expandableListPreferredItemPaddingLeft"
+        android:text="Header 5"
+        android:textColor="#ccbb00"
+        android:textSize="17dp" />
+
+</LinearLayout>
